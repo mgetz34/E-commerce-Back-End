@@ -16,7 +16,7 @@ router.get('/:id', async (req, res) => {
 });
 
 //http://localhost:3001/api/products
-//needs work 400 error
+//needs work 400 error bad request 
 router.post('/', (req, res) => {
   //added below req.body
   Product.create(
@@ -49,7 +49,7 @@ router.post('/', (req, res) => {
 });
 
 //http://localhost:3001/api/products/:id
-//400 bad request needs work
+//needs work 400 bad request 
 router.put('/:id', (req, res) => {
   Product.update(req.body, {
     where: {

@@ -2,18 +2,21 @@ const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
 //http://localhost3001/api/tags
+//not working
 router.get('/', async (req, res) => {
   const tagData = await Tag.findAll();
   return res.json(tagData);
 });
 
 //http://localhost3001/api/tags/:id
+//not working
 router.get('/:id', async (req, res) => {
   const tagData = await Tag.findByPk(req.params.id);
   return res.json(tagData);
 });
 
 //http://localhost3001/api/tags
+//not working
 router.post('/', async (req, res) => {
   try {
     const tagData = await Tag.create(req.body);
@@ -24,6 +27,7 @@ router.post('/', async (req, res) => {
 });
 
 //http://localhost3001/api/tags/:id
+//not working
 router.put('/:id', async (req, res) => {
   const updatedTag = await Tag.update(
     {
@@ -39,6 +43,7 @@ router.put('/:id', async (req, res) => {
 });
 
 //http://localhost3001/api/tags/:id
+//not working
 router.delete('/:id', async (req, res) => {
   try {
     const tagData = await Tag.destroy({
