@@ -1,19 +1,22 @@
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
-//http://localhost:3001/api/categories/
+//http://localhost:3001/api/categories
+//tests good
 router.get('/', async (req, res) => {
   const catData = await Category.findAll();
   return res.json(catData);
 });
 
 //http://localhost:3001/api/categories/:id
+//tests good
 router.get('/:id', async (req, res) => {
   const catData = await Category.findByPk(req.params.id);
   return res.json(catData);
 });
 
-//http://localhost:3001/api/categories/
+//http://localhost:3001/api/categories
+//tests good
 router.post('/', async (req, res) => {
   try {
     const catData = await Category.create(req.body);
@@ -24,6 +27,7 @@ router.post('/', async (req, res) => {
 });
 
 //http://localhost:3001/api/categories/:id
+//tests good
 router.put('/:id', async (req, res) => {
   const updatedCategory = await Category.update(
     {
@@ -39,6 +43,7 @@ router.put('/:id', async (req, res) => {
 });
 
 //http://localhost:3001/api/categories/:id
+//tests good
 router.delete('/:id', async (req, res) => {
   try {
     const catData = await Category.destroy({

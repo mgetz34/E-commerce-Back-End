@@ -2,26 +2,30 @@ const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
 //http://localhost:3001/api/products
+//tests good
 router.get('/', async (req, res) => {
   const productData = await Product.findAll();
   return res.json(productData);
 });
 
 //http://localhost:3001/api/products/:id
+//tests good
 router.get('/:id', async (req, res) => {
   const productData = await Product.findByPk(req.params.id);
   return res.json(productData);
 });
 
 //http://localhost:3001/api/products
+//needs work 400 error
 router.post('/', (req, res) => {
   //added below req.body
   Product.create(
     {
+      product_id: req.body.product_id,
       product_name: req.body.product_name,
       price: req.body.price,
       stock: req.body.stock,
-      tagIds: req.body.tagIds
+      category_id: req.body.category_id
     })
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
@@ -45,8 +49,8 @@ router.post('/', (req, res) => {
 });
 
 //http://localhost:3001/api/products/:id
+//400 bad request needs work
 router.put('/:id', (req, res) => {
-  // update product data
   Product.update(req.body, {
     where: {
       id: req.params.id,
@@ -87,6 +91,7 @@ router.put('/:id', (req, res) => {
 });
 
 //http://localhost:3001/api/products/:id
+//needs work 500 error
 router.delete('/:id', async (req, res) => {
   try {
     const productData = await Product.destroy({
