@@ -13,7 +13,6 @@ router.get('/:id', async (req, res) => {
   return res.json(productData);
 });
 
-
 //http://localhost:3001/api/products
 router.post('/', (req, res) => {
   //added below req.body
@@ -45,7 +44,6 @@ router.post('/', (req, res) => {
     });
 });
 
-// update product
 //http://localhost:3001/api/products/:id
 router.put('/:id', (req, res) => {
   // update product data
