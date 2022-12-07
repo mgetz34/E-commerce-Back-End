@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) => {
 
 //http://localhost:3001/api/products
 // CREATE a product
-//needs work 400 error bad request 
+//tests good
 router.post('/', (req, res) => {
   //added below req.body
   Product.create(
@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
       product_name: req.body.product_name,
       price: req.body.price,
       stock: req.body.stock,
-      category_id: req.body.category_id
+      tagIds: req.body.tagIds,
     })
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
@@ -52,7 +52,7 @@ router.post('/', (req, res) => {
 
 //http://localhost:3001/api/products/:id
 //UPDATE a product
-//needs work 400 bad request 
+//tests good
 router.put('/:id', (req, res) => {
   Product.update(req.body, {
     where: {
