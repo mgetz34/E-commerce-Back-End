@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
 //http://localhost:3001/api/products
+//GET all products
 //tests good
 router.get('/', async (req, res) => {
   const productData = await Product.findAll();
@@ -9,6 +10,7 @@ router.get('/', async (req, res) => {
 });
 
 //http://localhost:3001/api/products/:id
+//GET product by id 
 //tests good
 router.get('/:id', async (req, res) => {
   const productData = await Product.findByPk(req.params.id);
@@ -16,12 +18,12 @@ router.get('/:id', async (req, res) => {
 });
 
 //http://localhost:3001/api/products
+// CREATE a product
 //needs work 400 error bad request 
 router.post('/', (req, res) => {
   //added below req.body
   Product.create(
     {
-      product_id: req.body.product_id,
       product_name: req.body.product_name,
       price: req.body.price,
       stock: req.body.stock,
@@ -49,6 +51,7 @@ router.post('/', (req, res) => {
 });
 
 //http://localhost:3001/api/products/:id
+//UPDATE a product
 //needs work 400 bad request 
 router.put('/:id', (req, res) => {
   Product.update(req.body, {
@@ -91,6 +94,7 @@ router.put('/:id', (req, res) => {
 });
 
 //http://localhost:3001/api/products/:id
+//DELETE a prroduct
 //needs work 500 error
 router.delete('/:id', async (req, res) => {
   try {
