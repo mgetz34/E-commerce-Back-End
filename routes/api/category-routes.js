@@ -5,18 +5,34 @@ const { Category, Product } = require('../../models');
 //GET all categories
 //tests good
 router.get('/', async (req, res) => {
-  const catData = await Category.findAll();
-  return res.json(catData);
+  try {
+    const catData = await Category.findAll({
+      include: [{ model: Product }],
+    });
+    res.status(200).json(catData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 //http://localhost:3001/api/categories/:id
 //GET category by id
 //tests good
 router.get('/:id', async (req, res) => {
-  const catData = await Category.findByPk(req.params.id);
-  return res.json(catData);
-});
+  try {
+    const catData = await Category.findByPk(req.params.id, {
+      include: [{ model: Product }],
+    });
 
+    if (!catData) {
+      res.status(404).json({ message: 'No Category found with that id!' });
+      return;
+    }
+    res.status(200).json(catData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 //http://localhost:3001/api/categories
 //CREATE a product
 //tests good
