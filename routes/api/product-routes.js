@@ -5,16 +5,33 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 //GET all products
 //tests good
 router.get('/', async (req, res) => {
-  const productData = await Product.findAll();
-  return res.json(productData);
+  try {
+    const productData = await Product.findAll({
+      include: [{ model: Category }, { model: Tag }, { model: ProductTag }],
+    });
+    res.status(200).json(productData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 //http://localhost:3001/api/products/:id
 //GET product by id 
 //tests good
 router.get('/:id', async (req, res) => {
-  const productData = await Product.findByPk(req.params.id);
-  return res.json(productData);
+  try {
+    const productData = await Product.findByPk(req.params.id, {
+      include: [{ model: Category }, { model: Tag }, { model: ProductTag }],
+    });
+
+    if (!productData) {
+      res.status(404).json({ message: 'No Product found with that id!' });
+      return;
+    }
+    res.status(200).json(productData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 //http://localhost:3001/api/products
