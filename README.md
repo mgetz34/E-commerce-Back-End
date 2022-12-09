@@ -28,17 +28,17 @@
 
 ## License
 
-This Application is covered by a: ![License](https://img.shields.io/badge/license-MIT-green)
+This Application features a: ![License](https://img.shields.io/badge/license-MIT-green)
 
 ## Description
 
-The user story for this app is as follows:
+User story:
 
 AS A manager at an internet retail company
 I WANT a back end for my e-commerce website that uses the latest technologies
 SO THAT my company can compete with other e-commerce companies
 
-Acceptance criteria is as follows:
+Acceptance criteria:
 
 GIVEN a functional Express.js API
 WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
@@ -52,18 +52,13 @@ THEN the data for each of these routes is displayed in a formatted JSON
 WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
 THEN I am able to successfully create, update, and delete data in my database
 
-The motivationfor this project was to build a express.js server to interact with a sql server and database managed using custom models and workbench sql editing software. 
-This project was built to help strengthen the concepts of object relational mapping, and to use sequleize to dynamically create table joins based on user input. The application features 
-three tables of information, related together through one-many and many-many relationships. All three categories can be accessed using two GET routes, a POST route, a PUT route, and a delete route. 
-This application helps to solve the problem...
-Concepts of sql database management, express.js servers, try-catch methods, and 
-What makes your project stand out?
-
-SQL, Express, Accociations, OOP
+The motivation for this project was to build a express.js API to interact with a sql server and database managed using custom models and workbench sql editing software.
+This project was built to help strengthen the concepts of object relational mapping, and to use sequleize to dynamically create table joins based on user input. The application features
+three tables of information, related together through one-many and many-many relationships. All three categories can be accessed using two GET routes, a POST route, a PUT route, and a DELETE route. This application helps to solve the problem of navigating through user request and server responses translating data pertiaing to a simple e-commerce site. This isone of the fundentals for the full stack web development model. During this project, I practiced and learned the concepts of sql database management, express.js servers, try-catch methods, and sequelize models with relationships.
 
 ## Installation
 
-npm i, npm run seed, initialize database with workbench, npm run seed, test routes with insomnia
+npm i, initialize database with workbench, npm run seed, test routes with insomnia or web at http:localhost:3001
 
 ## Usage
 
@@ -75,11 +70,11 @@ N/A
 
 ## Features
 
-SQL database management, custom routes, seed data
+SQL database management, custom routes, seed data, sequleize methods, custom express.js API
 
 ## How to Contribute
 
-Always open to feedback, send me an email!
+Always open to feedback, send me an email or message on LI!
 
 ## Tests
 
@@ -87,9 +82,10 @@ N/A
 
 ## Questions
 
-For any questions, please view my repo at: https://github.com/mgetz34
-My email address is: mgetz340@gmail.com
+For any questions, please view my repo at: [link](https://github.com/mgetz34/E-commerce-Back-End){target="\_blank"}
+My email address is: [link](mgetz340@gmail.com){target="\_blank"}
+LI: [link](https://www.linkedin.com/in/michael-getz-340){target="\_blank"}
 
 ## Walkthru Video
 
-https://drive.google.com/file/d/175G55NJkED4pgfl-8qe41zv_2Dztl0MB/view
+LI: [link](https://drive.google.com/file/d/175G55NJkED4pgfl-8qe41zv_2Dztl0MB/view){target="\_blank"}
