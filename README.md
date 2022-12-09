@@ -82,10 +82,10 @@ N/A
 
 ## Questions
 
-For any questions, please view my repo at: <a href="https://github.com/mgetz34/E-commerce-Back-End" target="\_blank"</a>
-My email address is: <a href="mgetz340@gmail.com" target="\_blank"</a>
-LI: <a href="https://www.linkedin.com/in/michael-getz-340" target="\_blank"</a>
+For any questions, please view my repo at: https://github.com/mgetz34/E-commerce-Back-End
+My email address is: mgetz340@gmail.com
+LI: https://www.linkedin.com/in/michael-getz-340
 
 ## Walkthru Video
 
-LI: <a href="https://drive.google.com/file/d/175G55NJkED4pgfl-8qe41zv_2Dztl0MB/view" target="\_blank"</a>
+LI: https://drive.google.com/file/d/175G55NJkED4pgfl-8qe41zv_2Dztl0MB/view
