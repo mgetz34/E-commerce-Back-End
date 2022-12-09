@@ -90,4 +90,4 @@ LI: https://www.linkedin.com/in/michael-getz-340
 
 ## Walkthru Video
 
-https://drive.google.com/file/d/175G55NJkED4pgfl-8qe41zv_2Dztl0MB/view
+https://drive.google.com/file/d/1hmNCpZuLyJQ7Z5WYMVL0-6sIRi9CT5Cy/view
